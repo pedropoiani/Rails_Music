@@ -1,0 +1,31 @@
+.container-fluid {
+
+    margin-top: 90px;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}
+
+  .btn {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    color: rgb(255, 255, 255) !important;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .warning:hover {
+    background: #000000;
+    color: white;
+  }
+  
