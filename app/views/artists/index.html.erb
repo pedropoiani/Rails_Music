@@ -1,21 +1,12 @@
 
-<div class="card text-center">
-  <div class="card-header">
-    Listas de Bandas e Artistas
-  </div>
 
-<p> O Conteúdo da Variável Consulta Será Exibido Abaixo: </p>
+<h3> Lista de Artistas</h3>
+<ul class="list-group">
+  <% @artist.each do |artist|  %>
+  <%= link_to artist_path(artist), class: "list-group-item list-group-item-action" do %>
+  <h1 class="h6"><%= artist.name %></small></h1>
+    <%end%>
+  <%end%>
 
-<table class="table table-hover" style="text-align:center; margin-top: 10px">
-      <thead class="thead-dark">
-   <tr > 
-     <th>ID</th>
-     <th>Artista/Banda</th>
-   </tr>
-</thead>
-   <% @artist.each do |artist|  %>
-   <tr>
-      <td> <%= artist.id %> </td>
-      <td> <%= artist.name %> </td>
-   <tr>
-<%end%>
+</ul>
+  

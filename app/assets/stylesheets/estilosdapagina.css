@@ -28,4 +28,7 @@
     background: #000000;
     color: white;
   }
-  
+
+  .list-group-hover .list-group-item:hover {
+    background-color: #ff0000;
+}
