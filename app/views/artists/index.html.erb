@@ -1,12 +1,21 @@
 
+<div class="container" id="">
+  <div class="card" id="s">
+    <div class="col-sm">
+      <h3> Lista de Artistas</h3>
+    </div>
+    <div class="col-sm">
+     Total de Artistas: <%= @artist.count%></p>
+    </div>
+  
+   </div>
 
-<h3> Lista de Artistas</h3>
 <ul class="list-group">
   <% @artist.each do |artist|  %>
   <%= link_to artist_path(artist), class: "list-group-item list-group-item-action" do %>
   <h1 class="h6"><%= artist.name %></small></h1>
     <%end%>
   <%end%>
-
+ </div>
 </ul>
   
