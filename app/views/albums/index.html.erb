@@ -1,34 +1,30 @@
 
-<div class="card text-center">
-  <div class="card-header">
-    Listas de Bandas e Artistas
-  </div>
-
-<p> O Conteúdo da Variável Consulta Será Exibido Abaixo: </p>
-
-
-<ul class="list-group">
+<div class="container" id="">
+  <div class="card" id="s">
+    <div class="col-sm">
+      <h3> Lista de Albuns</h3>
+    </div>
+    <div class="col-sm">
+     Total de Albuns: <%= @album.count%></p>
+    <%= text_field_tag(:valor, params[:valor])%>
+    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %>
+    </div>
   
-  
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
+   </div>
 
-
-</ul>
-
-<table class="table table-hover" style="text-align:center; margin-top: 10px">
-      <thead class="thead-dark">
-   <tr > 
-     <th>ID</th>
-     <th>Albuns</th>
-   </tr>
-</thead>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Album</th>
+      <th scope="col">Artista</th>
+    </tr>
+  </thead>
+  <tbody>
    <% @album.each do |album|  %>
-   <tr>
-      <td> <%= album.id %> </td>
-      <td> <%= album.title %> </td>
-   <tr>
-<%end%>
+    <tr>
+      <td><%= link_to album.title, album_path(album) %></td>
+      <td> <%= album.artist.name%> </td>
+    </tr>
+    <%end%>
+    </table>
+  </tbody>

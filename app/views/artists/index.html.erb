@@ -6,6 +6,8 @@
     </div>
     <div class="col-sm">
      Total de Artistas: <%= @artist.count%></p>
+    <%= text_field_tag(:valor, params[:valor])%>
+    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %>
     </div>
   
    </div>

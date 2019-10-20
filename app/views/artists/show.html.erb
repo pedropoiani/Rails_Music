@@ -1,0 +1,10 @@
+<ul class="list-group" style="margin-top: 25px"> 
+      <li class="list-group-item"><b>Nome:</b> <%= @artist.name %></li>
+
+      <ul class="list-group" style="margin-top: 25px">
+      <% @artist.albums.each do |album| %>    
+        <li class="list-group-item"><b>Tracks</b> <%= album.title %></li>
+        <li class="list-group-item"><b>Tracks</b> <%= album.tracks.count %></li>
+      
+       <% end %>
+      </ul>
