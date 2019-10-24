@@ -1,0 +1,11 @@
+<h5> Novo Artista</h5>
+
+<%= @artist.errors.first %>
+
+<%= form_for @artist, html: { multipart: true } do |f| %>
+<b> Nome:</b><br>
+<%= f.text_field :name %>
+<p></p>
+<%= f.submit("criar", :class => "btn btn-dark")  %>
+
+<% end %>

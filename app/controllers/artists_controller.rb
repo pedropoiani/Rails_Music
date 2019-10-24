@@ -41,8 +41,8 @@ class ArtistsController < ApplicationController
       def create
 
         @artist = Artist.new(artist_params)
-        if @Artist.save
-          redirect_to @Artist, :notice => 'Cadastro criado com sucesso!'
+        if @artist.save
+          redirect_to @artist, :notice => 'Cadastro criado com sucesso!'
           else
             render :new
           end

@@ -1,10 +1,80 @@
-<ul class="list-group" style="margin-top: 25px"> 
-      <li class="list-group-item"><b>Nome:</b> <%= @artist.name %></li>
 
-      <ul class="list-group" style="margin-top: 25px">
-      <% @artist.albums.each do |album| %>    
-        <li class="list-group-item"><b>Tracks</b> <%= album.title %></li>
-        <li class="list-group-item"><b>Tracks</b> <%= album.tracks.count %></li>
+            <div class="card text-center" id="s" >
+                <div class="card-header">
+                 <h3> <%=@artist.name%> </h3>
+                </div>
+                     <div class="card-body">
+                        <a href="/" class="btn btn-primary">Voltar Para Artistas</a>
+                        <a href="#" class="btn btn-primary">Editar Artista <%= @artist.name%></a>
+                      </div>
+                    </div>
+
       
-       <% end %>
-      </ul>
+        <div class="container mt-4">
+         
+            <div class="row">
+            <% @artist.albums.each do |album| %>
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    
+                    <!--Card-->
+                    <div class="card elegant-color">
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            
+                            <h6 class="text-negrito"><%= album.title %></h6>
+                            
+                            <p class="card-text white-text">
+
+                         
+                              <li class="color-li"> Total de Musicas: <%= album.tracks.count%></li>
+                          
+                         
+                            </p>
+
+                           <%= link_to 'Mostrar Album', album_path(album), class: 'btn btn-success my-3'%>
+                            
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+             <% end %>
+            </div>
+
+   
+         
+            <div class="row">
+            
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    
+                    <!--Card-->
+                    <div class="card elegant-color-green">
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            
+                            <h6 class="text-negrito-black">Adicionar novo Album em <%=@artist.name%> </h6>
+                            
+                            <p class="card-text white-text">
+
+                         
+                               <%= link_to 'Criar Album', new_album_path, class: 'btn btn-dark my-3'%>
+                          
+                         
+                            </p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+            
+                </div>
+             
+     
+
+
+
+             

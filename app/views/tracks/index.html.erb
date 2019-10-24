@@ -1,0 +1,34 @@
+
+<div class="card" id="s">
+  <div class="card-header">
+   <h3> Lista de Musicas </h3>
+   <h5> Total de Musicas: <%=@track.count %></h5>  
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">
+    
+    <%= text_field_tag(:valor, params[:valor])%>
+    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %></p>
+    
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Musica</th>
+      <th scope="col">Compositor</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @track.each do |track|  %>
+    <tr>
+      <td> <%= track.name%> </td>
+      <td> <%= track.composer%> </td>
+    </tr>
+    <%end%>
+    </table>
+  </tbody>
+    

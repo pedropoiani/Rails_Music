@@ -1,36 +1,7 @@
 .container-fluid {
 
-    margin-top: 90px;
+    margin-top: 20px;
 
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-}
-
-  .btn {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: white;
-    color: rgb(255, 255, 255) !important;
-    padding: 14px 28px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .warning:hover {
-    background: #000000;
-    color: white;
-  }
-
-  .list-group-hover .list-group-item:hover {
-    background-color: #ff0000;
 }
 
 #s {
@@ -45,10 +16,55 @@
  
 }
 
-#btn {
-  
-  color: #000000;
-  background-color: rgb(0, 119, 255);
- 
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
 }
 
+.color-li{
+
+  color: #fff;
+  
+}
+
+.text-negrito {
+
+  font-weight: 1000;
+  color: #fff;
+}
+
+.text-negrito-black {
+
+  font-weight: 1000;
+  color: #000;
+
+}
+
+.elegant-color{
+  
+  background-color:#2E2E2E!important
+}
+
+.elegant-color-dark{
+  
+  background-color:#212121!important
+
+}
+
+.elegant-color-green{
+  
+  background-color:#97da8e!important
+
+}
+
+.card{
+
+  border: none!important;
+  
+}

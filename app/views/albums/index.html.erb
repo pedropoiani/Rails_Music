@@ -1,16 +1,19 @@
 
-<div class="container" id="">
-  <div class="card" id="s">
-    <div class="col-sm">
-      <h3> Lista de Albuns</h3>
-    </div>
-    <div class="col-sm">
-     Total de Albuns: <%= @album.count%></p>
+<div class="card" id="s">
+  <div class="card-header">
+   <h3> Lista de Albuns </h3>
+   <h5> Total de Albuns <%=@album.count %></h5>  
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">
+    
     <%= text_field_tag(:valor, params[:valor])%>
-    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %>
-    </div>
-  
-   </div>
+    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %></p>
+    
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
 
 <table class="table">
   <thead class="thead-dark">
@@ -28,14 +31,4 @@
     <%end%>
     </table>
   </tbody>
-       <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t i x">
-                    <div class="single-album">
-                        <img src="img/bg-img/a6.jpg" alt="">
-                        <div class="album-info">
-                            <a href="#">
-                                <h5>The Ustopable</h5>
-                            </a>
-                            <p>Unplugged</p>
-                        </div>
-                    </div>
-                </div>
+    

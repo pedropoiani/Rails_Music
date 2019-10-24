@@ -1,18 +1,41 @@
-<% @album.tracks.each do |track| %>
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header" id="heading<%=track.id%>">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%=track.id%>" aria-expanded="false" aria-controls="collapse<%=track.id%>" id="btn">
-            Nome da Música
-          </button>
-        </h5>
-      </div>
-      <div id="collapse<%=track.id%>" class="collapse" aria-labelledby="heading<%=track.id%>" data-parent="#accordion">
-        <div class="card-body">
-          Informações da Track
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+
+
+            <div class="card text-center" id="s">
+                <div class="card-header">
+                 <h3><%= @album.title %></h3>
+                </div>
+                     <div class="card-body">
+                        <a href="/" class="btn btn-primary">Voltar Para Artistas</a>
+                        <a href="/albuns" class="btn btn-primary">Voltar Para Albuns</a>
+                        <a href="#" class="btn btn-primary">Editar Este Album</a>
+                        <a href="#" class="btn btn-primary">Add Musica</a>
+                      </div>
+                    </div>
+
+
+        <% @album.tracks.each do |tracks| %>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="heading<%=tracks.id%>">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%=tracks.id%>" aria-expanded="false" aria-controls="collapse<%=tracks.id%>" >
+                    <%= tracks.name %>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse<%=tracks.id%>" class="collapse" aria-labelledby="heading<%=tracks.id%>" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+
+                    <li><b>Tipo de Midia:</b> <%=tracks.media_type.name %></li>
+                    <li><b>Genero: </b><%=tracks.genre.name%></li>
+                    <li><b>Compositor:</b> <%=tracks.composer %></li>
+                    <li><b>Tamanho:</b> <%=tracks.bytes%> </li>
+                    <li><b>Tempo:</b> <%=tracks.milliseconds %></li>
+                    <li><b>Preço: </b>R$ <%=tracks.unit_price %></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+              <% end %>

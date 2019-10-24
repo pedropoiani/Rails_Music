@@ -6,6 +6,8 @@
     <title>Crud-Musical</title>
     <%= csrf_meta_tags %>
 
+
+   
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
@@ -14,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
      <!--Bootstrap -->
 
      <link rel="icon" href="img/ruby-on-rails-icon.png" type="image/x-icon" />
@@ -22,30 +25,45 @@
 
    <header>
 
-          <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <a class="navbar-brand"> 
-            <%= image_tag('music-ico.png', { height: 40, alt: 'Logo' }) %>
-            </a>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="btn warning" href="/">Artistas</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn warning" href="/albums">Albuns</a>
-              </li>
-              <li class="nav-item">
-                 <button class="btn warning" href="#">Musicas</button>
+          <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <a href="#" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+                <!-- Logo Text -->
+                <span class="text-uppercase font-weight-bold">Company</span>
+              </a>
 
-              </li>
-            </ul>
+              <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
 
+              <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+              
+                     <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Artista 
+                          </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="/">Listar Todos</a>
+                                  <a class="dropdown-item" href="#">Pesquisar</a>
+                                  <a> <%= link_to 'Novo Artista', new_artist_path, class: "dropdown-item" %> </a>
+                                </div>
+                        </li>
+                  
+                  
+                  <li class="nav-item"><a href="/albums" class="nav-link">Albuns</a></li>
+                  <li class="nav-item"><a href="/tracks" class="nav-link">Musicas</a></li>
+                  
+                  </div>
+                </ul>
+              </div>
+            </div>
           </nav>
-
     </header>
 
   <body>
 
-   <div class="container-fluid">
+   <div class="container mt-4">
 
 
        <%= yield %>

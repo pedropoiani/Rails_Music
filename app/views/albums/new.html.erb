@@ -1,0 +1,16 @@
+<h5> Novo album</h5>
+
+<%= @album.errors.first %>
+
+<%= form_for @album, html: { multipart: true } do |f| %>
+<div class="form-group">
+    <b> Artistas:</b><br>
+    <%= f.collection_select(:artist_id, Artist.all, :id, :name, {},  
+    {:class => 'custom-select'}) %>
+  </div>
+<b> Titulo:</b><br>
+<%= f.text_field :title %>
+<p></p>
+<%= f.submit("criar", :class => "btn btn-dark")  %>
+
+<% end %>

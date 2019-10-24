@@ -1,16 +1,19 @@
 
-<div class="container" id="">
-  <div class="card" id="s">
-    <div class="col-sm">
-      <h3> Lista de Artistas</h3>
-    </div>
-    <div class="col-sm">
-     Total de Artistas: <%= @artist.count%></p>
-    <%= text_field_tag(:valor, params[:valor])%>
-    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %>
-    </div>
-  
-   </div>
+<div class="card" id="s">
+  <div class="card-header">
+   <h3> Lista de Artistas </h3>
+   <h5> Total de Artistas: <%=@artist.count %></h5>  
+  </div>
+  <div class="card-body">
+    
+    <p class="card-text">
+    
+   <%= text_field_tag(:valor, params[:valor])%>
+  <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %>
+    
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
 
 <ul class="list-group">
   <% @artist.each do |artist|  %>
@@ -18,6 +21,5 @@
   <h1 class="h6"><%= artist.name %></small></h1>
     <%end%>
   <%end%>
- </div>
 </ul>
   
