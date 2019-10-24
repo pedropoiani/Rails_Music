@@ -1,44 +1,18 @@
-<div class="card text-center">
-  <div class="card-header">
-    Informaçôes
-  </div>
-  <div class="card-body">
-    <h5 class="card-title"><%= @album.title %></h5>
- 
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Editar Album</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-  
-</div>
-
-
-<div class="accordion" id="accordionExample">
-  <% @album.tracks.each do |info| %>
-  <div class="card">
- 
-    <div class="card-header" id="headingOne">
-     
-      <h2 class="mb-0">
-     
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="btn">
-        
-        <%= info.name %>
-        </button>
-      </h2>
-    </div>
- 
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit
+<% @album.tracks.each do |track| %>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="heading<%=track.id%>">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%=track.id%>" aria-expanded="false" aria-controls="collapse<%=track.id%>" id="btn">
+            Nome da Música
+          </button>
+        </h5>
+      </div>
+      <div id="collapse<%=track.id%>" class="collapse" aria-labelledby="heading<%=track.id%>" data-parent="#accordion">
+        <div class="card-body">
+          Informações da Track
+        </div>
       </div>
     </div>
   </div>
-  <%end%>
-     
-  
-
+<% end %>
