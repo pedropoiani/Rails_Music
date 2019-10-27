@@ -68,3 +68,9 @@
   border: none!important;
   
 }
+
+.featured-number {
+  background-color: #000;
+  color: orange;
+  border-radius: 5px;
+}
