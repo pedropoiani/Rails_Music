@@ -1,0 +1,22 @@
+<div class="card text-center" id="s" >
+    <div class="card-header">
+      <h3> Nova Música </h3>
+    </div>
+    <div class="card-body">
+      <a href="/" class="btn btn-primary">Voltar Para Artistas</a>
+      
+    </div>
+</div>
+
+<form>
+<%= form_for @track do |track| %>
+ <label for="name">Nome da Música:</label><input type="text" class="form-control">
+ <label for="album">Nome do Álbum:</label><input type="text" class="form-control">
+ <label for="genre">Gênero:</label><input type="text" class="form-control">
+ <label for="composer">Compositor:</label><input type="text" class="form-control"> 
+ <label for="type">Tipo de Mídia:</label><input type="text" class="form-control">
+ <label for="time">Tamanho:</label><input type="text" class="form-control">
+ <label for="price">Preço:</label><input type="text" class="form-control">
+  <%= track.submit 'Salvar'  %>
+  <% end %>
+</form>
