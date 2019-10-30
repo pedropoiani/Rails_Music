@@ -33,7 +33,7 @@
                     <li><b>Tamanho:</b> <%=tracks.bytes%> </li>
                     <li><b>Tempo:</b> <%=tracks.milliseconds %></li>
                     <li><b>Preço: </b>R$ <%=tracks.unit_price %></li>
-                    <li><%= link_to "Remover", tracks, method: :delete, class: "btn btn-danger", data: { confirm: "Deseja remover permanentemente \"#{tracks.name}\"?"} %><li>
+                    <%= link_to "Remover", tracks, method: :delete, class: "btn btn-danger", data: { confirm: "Deseja remover permanentemente \"#{tracks.name}\"?"} %>
 
                     
                   </ul>
