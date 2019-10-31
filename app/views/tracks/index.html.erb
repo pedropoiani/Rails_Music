@@ -20,6 +20,7 @@
     <tr>
       <th scope="col">Musica</th>
       <th scope="col">Compositor</th>
+      <th scope="col">Ação</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,7 @@
     <tr>
       <td> <%= track.name%> </td>
       <td> <%= track.composer%> </td>
+      <td> <%= link_to 'Editar' , edit_track_path(track), class:"btn btn-warning"%>
     </tr>
     <%end%>
     </table>

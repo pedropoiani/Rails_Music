@@ -38,7 +38,7 @@ class TracksController < ApplicationController
 
                   @track = Track.find(params[:id])
                     
-                     if @track.update(track_params)
+                     if @track.update_attributes(track_params)
                       redirect_to @track.album, :notice => 'Cadastro Atualizado com Sucesso!'
                     
                       else
@@ -60,7 +60,7 @@ class TracksController < ApplicationController
 
                 def track_params
                     params.require(:track).permit(:name, :album_id, :media_type_id, :genre_id,
-                                                  :milliseconds, :bytes, :unit_price)
+                                                  :milliseconds, :bytes, :unit_price, :composer)
                 end
 
 
