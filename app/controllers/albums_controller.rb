@@ -20,6 +20,13 @@ class AlbumsController < ApplicationController
 
         end  
 
+        def edit
+
+          @album = Album.find(params[:id])
+
+        end  
+
+
         def create
 
           @album = Album.new(album_params)
@@ -30,6 +37,18 @@ class AlbumsController < ApplicationController
             end
 
           end 
+
+          def update
+
+            @album = Album.find(params[:id])
+               if @album.update(album_params)
+                redirect_to @album, :notice => 'Cadastro Atualizado com Sucesso!'
+                else
+                  render :update
+                end
+              end
+
+          
           
           private
 

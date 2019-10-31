@@ -1,0 +1,12 @@
+<h4>Editar Artista</h4>
+
+<%= form_for @artist do |f| %>
+
+   <b>Nome: </b><br/>
+   <%= f.text_field :name %>
+</p><p>
+
+<%= f.submit("Salvar", :class => "btn btn-dark")  %>
+
+</p>
+<% end %>

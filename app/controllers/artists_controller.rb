@@ -21,13 +21,13 @@ class ArtistsController < ApplicationController
 
   def edit
 
-    @Artist = Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
 
   end
 
   def update
       
-      @artist = artist.find(params[:id])
+      @artist = Artist.find(params[:id])
 
         if @artist.update_attributes(artist_params)
           redirect_to @artist, :notice => 'Cadastro Atualizado com Sucesso!'

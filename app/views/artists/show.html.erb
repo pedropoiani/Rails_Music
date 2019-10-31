@@ -5,7 +5,8 @@
                 </div>
                      <div class="card-body">
                         <a href="/" class="btn btn-primary">Voltar Para Artistas</a>
-                        <a href="#" class="btn btn-primary">Editar Artista <%= @artist.name%></a>
+                        <%= link_to "Editar #{@artist.name}", edit_artist_path(@artist), class:"btn btn-primary"%>
+                   
                       </div>
                     </div>
 

@@ -1,0 +1,20 @@
+<h4> Editar Album </h4>
+
+
+<%= form_for @album do |f| %>
+
+<div class="form-group">
+    <b> Artista:</b><br>
+    <%= f.collection_select(:artist_id, Artist.all, :id, :name, {},  
+    {:class => 'custom-select'}) %>
+  </div>
+
+   <b>Nome: </b><br/>
+   <%= f.text_field :title %>
+</p><p>
+
+<%= f.submit("Salvar", :class => "btn btn-dark")  %>
+
+</p>
+<% end %>
+

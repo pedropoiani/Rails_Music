@@ -1,0 +1,40 @@
+<h4>Editar Musica</h4>
+
+<%= form_for @track do |f| %>
+<div class="form-group">
+    <b> Albuns:</b><br>
+    <%= f.collection_select(:album_id, Album.all, :id, :title, {},  
+    {:class => 'custom-select'}) %>
+  </div>
+
+  <div class="form-group">
+    <b> Tipo de Midia:</b><br>
+    <%= f.collection_select(:media_type_id, MediaType.all, :id, :name, {},  
+    {:class => 'custom-select'}) %>
+  </div>
+
+    <div class="form-group">
+    <b> Genero: </b><br>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {},  
+    {:class => 'custom-select'}) %>
+  </div>
+  <b>Nome:</b><br/>
+  <%= f.text_field :name %>
+</p><p>
+  <b>Compositor:</b><br/>
+  <%= f.text_field :composer %>
+</p><p>
+  <b>Tamanho:</b><br/>
+  <%= f.text_field :bytes %>
+</p><p>
+  <b>Preço:</b><br/>
+  <%= f.text_field :unit_price %>
+</p><p>
+   <b>Tempo: </b><br/>
+   <%= f.text_field :milliseconds %>
+</p><p>
+
+<%= f.submit("Salvar", :class => "btn btn-dark")  %>
+
+</p>
+<% end %>

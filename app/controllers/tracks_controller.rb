@@ -30,9 +30,23 @@ class TracksController < ApplicationController
 
                 def edit
 
-                    @track = Track.find(track_params[:id])
+                    @track = Track.find(params[:id])
                  
                 end
+
+                def update
+
+                  @track = Track.find(params[:id])
+                    
+                     if @track.update(track_params)
+                      redirect_to @track.album, :notice => 'Cadastro Atualizado com Sucesso!'
+                    
+                      else
+                        render :update
+                      end
+              
+                    end
+          
 
                 def destroy
                     track = Track.find(params[:id])

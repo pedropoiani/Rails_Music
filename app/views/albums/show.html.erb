@@ -6,8 +6,8 @@
                 </div>
                      <div class="card-body">
                         <a href="/" class="btn btn-primary">Voltar Para Artistas</a>
-                        <a href="/albuns" class="btn btn-primary">Voltar Para Albuns</a>
-                        <a href="#" class="btn btn-primary">Editar Este Album</a>
+                        <a href="/albums" class="btn btn-primary">Voltar Para Albuns</a>
+                         <%= link_to 'Editar' , edit_album_path(@album), class:"btn btn-primary"%>
                         <a href="/tracks/new" class="btn btn-primary">Add Musica</a>
                       </div>
                     </div>
@@ -33,6 +33,7 @@
                     <li><b>Tamanho:</b> <%=tracks.bytes%> </li>
                     <li><b>Tempo:</b> <%=tracks.milliseconds %></li>
                     <li><b>Preço: </b>R$ <%=tracks.unit_price %></li>
+                    <%= link_to 'Editar' , edit_track_path(tracks), class:"btn btn-warning"%>
                     <%= link_to "Remover", tracks, method: :delete, class: "btn btn-danger", data: { confirm: "Deseja remover permanentemente \"#{tracks.name}\"?"} %>
 
                     
