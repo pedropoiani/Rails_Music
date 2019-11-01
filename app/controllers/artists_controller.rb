@@ -3,10 +3,7 @@ class ArtistsController < ApplicationController
  
   def index
   
-    @artist = Artist.all
-    if params['name'].present?
-      @artist = @artist.where("name LIKE ?", "%#{params['name']}%")
-    end  
+    @artist = Artist.filtrar(params['name']) 
  end
 
     def new
