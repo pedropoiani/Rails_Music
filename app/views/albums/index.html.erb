@@ -8,9 +8,9 @@
     
     <p class="card-text">
     
-    <%= form_tag("/artists", method: "get") do %>
-    <%= label_tag(:name, "Filtrar:") %>
-    <%= text_field_tag(:name, params['name']) %>
+    <%= form_tag("/albums", method: "get") do %>
+    <%= label_tag(:title, "Filtrar:") %>
+    <%= text_field_tag(:title, params['title']) %>
     <%= submit_tag("OK") %>
     <% end %></p>
     
