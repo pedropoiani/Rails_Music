@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
  
   def index
   
-    @album = Album.all
+    @album = Album.filtrar(params['name'])
   
     end
     

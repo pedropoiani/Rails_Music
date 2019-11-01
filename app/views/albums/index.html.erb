@@ -8,8 +8,11 @@
     
     <p class="card-text">
     
-    <%= text_field_tag(:valor, params[:valor])%>
-    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %></p>
+    <%= form_tag("/artists", method: "get") do %>
+    <%= label_tag(:name, "Filtrar:") %>
+    <%= text_field_tag(:name, params['name']) %>
+    <%= submit_tag("OK") %>
+    <% end %></p>
     
     <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
   </div>
