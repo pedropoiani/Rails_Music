@@ -3,9 +3,8 @@ class ArtistsController < ApplicationController
  
   def index
   
-    @artist = Artist.all
-  
-    end
+    @artist = Artist.filtrar(params['name']) 
+ end
 
     def new
 

@@ -8,12 +8,22 @@
     
     <p class="card-text">
     
-    <%= text_field_tag(:valor, params[:valor])%>
-    <%= submit_tag("Filtrar", class: 'btn btn-info', :style => "margin-left: 10px" ) %></p>
+  <%= form_tag("/tracks", method: "get") do %>
+
+      <div class="input-group mb-3">
+         <div class="input-group-prepend">
+          <img src="https://res.cloudinary.com/musical-crud/image/upload/v1572666494/Logo/track_1_mkcuzu.svg">
+            </div>
+      <%= text_field_tag(:name, params['name'], class: "form-control") %>
+        <div class="input-group-prepend">
+      <%= submit_tag("Buscar", class: 'btn btn-dark') %> 
+    </div>
+      </div>
+<% end %>    
+
     
     <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-  </div>
-</div>
+
 
 <table class="table">
   <thead class="thead-dark">

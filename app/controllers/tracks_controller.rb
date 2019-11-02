@@ -3,7 +3,7 @@ class TracksController < ApplicationController
  
     def index
                 
-        @track = Track.all
+        @track = Track.filtrar(params['name'])
                 
     end
  
