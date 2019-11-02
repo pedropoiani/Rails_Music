@@ -8,10 +8,16 @@
     
     <p class="card-text">
     
-  <%= form_tag("/artists", method: "get") do %>
-  <%= label_tag(:name, "Filtrar:") %>
-  <%= text_field_tag(:name, params['name']) %>
-  <%= submit_tag("OK") %>
+<%= form_tag("/artists", method: "get") do %>
+      <div class="input-group mb-3">
+         <div class="input-group-prepend">
+          <img src="https://res.cloudinary.com/musical-crud/image/upload/v1572666035/Logo/artista-fim_1_cvbvhg.svg">
+         </div>
+      <%= text_field_tag(:name, params['name'], class: "form-control") %>
+        <div class="input-group-prepend">
+      <%= submit_tag("Buscar", class: 'btn btn-dark') %>
+        </div>
+      </div>
 <% end %>
 
     
