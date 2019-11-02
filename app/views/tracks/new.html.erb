@@ -10,6 +10,11 @@
 
 <h5> Nova Musica</h5>
 
+<% @track.errors.full_messages.each do |error| %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+<% end %>
 
 
 <%= form_for @track, html: { multipart: true } do |f| %>

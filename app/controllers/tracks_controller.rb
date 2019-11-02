@@ -42,7 +42,7 @@ class TracksController < ApplicationController
                       redirect_to @track.album, :notice => 'Cadastro Atualizado com Sucesso!'
                     
                       else
-                        render :update
+                        render :edit
                       end
               
                     end
