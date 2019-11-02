@@ -9,9 +9,15 @@
     <p class="card-text">
     
     <%= form_tag("/albums", method: "get") do %>
-    <%= label_tag(:title, "Filtrar:") %>
-    <%= text_field_tag(:title, params['title']) %>
-    <%= submit_tag("OK") %>
+    <div class="input-group mb-3">
+         <div class="input-group-prepend">
+          <img src="https://res.cloudinary.com/musical-crud/image/upload/v1572656618/Logo/iconfinder_search_172546_agifit.png">
+         </div>
+      <%= text_field_tag(:name, params['name'], class: "form-control") %>
+        <div class="input-group-prepend">
+      <%= submit_tag("Buscar", class: 'btn btn-dark') %>
+        </div>
+      </div>
     <% end %></p>
     
     <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
