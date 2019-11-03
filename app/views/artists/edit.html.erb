@@ -1,4 +1,19 @@
-<h4>Editar Artista</h4>
+<div class="card text-center" id="s" >
+    <div class="card-header">
+      <h3> Editar Artista </h3>
+    </div>
+    <div class="card-body">
+      <a href="/artists" class="btn btn-dark">Voltar para Artistas</a>
+      
+    </div>
+</div>
+
+
+<% @artist.errors.full_messages.each do |error| %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+<% end %>
 
 <%= form_for @artist do |f| %>
 

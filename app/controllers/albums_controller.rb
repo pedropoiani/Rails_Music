@@ -44,7 +44,7 @@ class AlbumsController < ApplicationController
                if @album.update(album_params)
                 redirect_to @album, :notice => 'Cadastro Atualizado com Sucesso!'
                 else
-                  render :update
+                  render :edit
                 end
               end
 

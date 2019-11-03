@@ -1,6 +1,19 @@
-<h5> Novo album</h5>
+<div class="card text-center" id="s" >
+    <div class="card-header">
+      <h3> Novo Album </h3>
+    </div>
+    <div class="card-body">
+      <a href="/albums" class="btn btn-dark">Voltar para Albuns</a>
+      
+    </div>
+</div>
 
-<%= @album.errors.first %>
+
+<% @album.errors.full_messages.each do |error| %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+<% end %>
 
 <%= form_for @album, html: { multipart: true } do |f| %>
 <div class="form-group">

@@ -32,7 +32,7 @@ class ArtistsController < ApplicationController
           redirect_to @artist, :notice => 'Cadastro Atualizado com Sucesso!'
       
         else
-          render :update
+          render :edit
         end
 
       end

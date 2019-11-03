@@ -1,5 +1,19 @@
-<h4> Editar Album </h4>
+<div class="card text-center" id="s" >
+    <div class="card-header">
+      <h3> Editar album </h3>
+    </div>
+    <div class="card-body">
+      <a href="/albums" class="btn btn-dark">Voltar para Abuns</a>
+      
+    </div>
+</div>
 
+
+<% @album.errors.full_messages.each do |error| %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+<% end %>
 
 <%= form_for @album do |f| %>
 
