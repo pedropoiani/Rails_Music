@@ -6,7 +6,7 @@ class Track < ApplicationRecord
   validates_presence_of :name, :album, :media_type, :genre,
                         :milliseconds, :bytes
 
-  validates_inclusion_of :unit_price, :in => 0.1..Float::INFINITY, :message => "Tem que ser maior que 0"
+  validates_inclusion_of :unit_price, :in => 0.1..Float::INFINITY, :message => "O Valor do Preço tem que ser superior a 0"
                         
                       
 end
