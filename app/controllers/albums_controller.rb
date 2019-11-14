@@ -10,9 +10,7 @@ class AlbumsController < ApplicationController
     end
     
     def new
-
-      @album = Album.new
-
+      @album = Album.new(artist_id: params[:artist_id])
      end
 
 

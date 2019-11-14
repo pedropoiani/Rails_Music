@@ -30,9 +30,9 @@
                     <li><b>Tipo de Midia:</b> <%=tracks.media_type.name %></li>
                     <li><b>Genero: </b><%=tracks.genre.name%></li>
                     <li><b>Compositor:</b> <%=tracks.composer %></li>
-                    <li><b>Tamanho:</b> <%=tracks.bytes%> </li>
+                    <li><b>Tamanho:</b> <%=number_to_human_size(tracks.bytes)%> </li>
                     <li><b>Tempo:</b> <%=tracks.milliseconds %></li>
-                    <li><b>Preço: </b>R$ <%=tracks.unit_price %></li>
+                    <li><b>Preço: </b> <%= number_to_currency(tracks.unit_price, unit: 'R$', separator: ',') %></li>
                     <%= link_to 'Editar' , edit_track_path(tracks), class:"btn btn-warning"%>
                     <%= link_to "Remover", tracks, method: :delete, class: "btn btn-danger", data: { confirm: "Deseja remover permanentemente \"#{tracks.name}\"?"} %>
 
