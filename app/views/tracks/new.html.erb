@@ -37,23 +37,23 @@
   </div>
 
 <b> Nome da Música:</b><br>
-<%= f.text_field :name %>
+<%= f.text_field :name, class:"form-control" %>
 <p></p>
 
 <b> Compositor:</b><br>
-<%= f.text_field :composer %>
+<%= f.text_field :composer, class:"form-control" %>
 <p></p>
 
 <b> Tamanho:</b><br>
-<%= f.text_field :bytes %>
+<%= f.text_field :bytes, class:"form-control" %>
 <p></p>
 
 <b> Preço:</b><br>
-<%= f.text_field :unit_price %>
+<%= f.text_field :unit_price, class:"form-control" %>
 <p></p>
 
 <b> Duração:</b><br>
-<%= f.text_field :milliseconds %>
+<%= f.text_field :milliseconds, class:"form-control" %>
 <p></p>
 
 <%= f.submit("criar", :class => "btn btn-dark")  %>
