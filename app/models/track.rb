@@ -6,7 +6,7 @@ class Track < ApplicationRecord
   validates_presence_of :name, :album, :media_type, :genre,
                         :milliseconds, :bytes
 
-  validates :unit_price, numericality: { greater_than: 0 }
+  validates :unit_price, :milliseconds, :bytes, numericality: { greater_than: 0 }
                         
                       
 end
