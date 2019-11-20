@@ -16,7 +16,7 @@
 <% end %>
 <%= form_for @artist, html: { multipart: true } do |f| %>
 <b> Nome:</b><br>
-<%= f.text_field :name %>
+<%= f.text_field :name, class:"form-control" %>
 <p></p>
 <%= f.submit("criar", :class => "btn btn-dark")  %>
 
